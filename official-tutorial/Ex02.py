@@ -88,3 +88,15 @@ for num in range(2, 10):
         continue # 이번 이터러블 끝냄
     print('홀수', num, '찾았음')
 
+# pass문
+# 아무 것도 하지 않음
+# 문법적으로 필요하긴 한데 뭐 시킬 일은 없을 때 사용함
+
+# while True:
+#     pass
+
+# 최소한의 클래스를 만들 때 사용되기도 함
+# 뭐야 너네 interface 같은 거도 없니 어휴 저런
+
+# https://docs.python.org/ko/3/tutorial/controlflow.html#pass-statements
+# 여기부터 해라
