@@ -67,9 +67,6 @@ print(list(enumerate(a)))
 
 # 범위 그냥 프린트하면 이상한 거 나옴
 print(range(5,10))
-<<<<<<< HEAD
-# 왜냐면 이건 리스트가 아니라 그냥 이터러블 객체이기 때문
-=======
 # 왜냐면 이건 리스트가 아니라 그냥 이터러블 객체이기 때문
 
 # 루프 break, continue, else
@@ -100,7 +97,3 @@ for num in range(2, 10):
 
 # 최소한의 클래스를 만들 때 사용되기도 함
 # 뭐야 너네 interface 같은 거도 없니 어휴 저런
-
-# https://docs.python.org/ko/3/tutorial/controlflow.html#pass-statements
-# 여기부터 해라
->>>>>>> origin/master
