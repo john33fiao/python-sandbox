@@ -67,7 +67,40 @@ print(list(enumerate(a)))
 
 # 범위 그냥 프린트하면 이상한 거 나옴
 print(range(5,10))
+<<<<<<< HEAD
+# 왜냐면 이건 리스트가 아니라 그냥 이터러블 객체이기 때문
+=======
 # 왜냐면 이건 리스트가 아니라 그냥 이터러블 객체이기 때문
 
-# https://docs.python.org/ko/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops
-# 여기부터 계속 진행할 것
+# 루프 break, continue, else
+# 소수 찾기 알고리즘
+for n in range(2, 10):
+    for x in range(2,n):
+        if n % x == 0: # 예외인 경우 실행함
+            print(n, '=', x, '*', n//x, '임')
+            break    # 실행하고 빠져나감 (다음 이터러블 객체로)
+        # break가 실행되지 않고 for 문이 종료하면 실행함
+    else:  # 이 else는 if가 아니라 for에 붙어있음 > try와 비슷하게 생각하면 됨
+        print('소수', n, '찾았음')
+        # 예외가 발생하지 않을 때 실행함
+
+# 홀짝 찾기 알고리즘
+for num in range(2, 10):
+    if num%2 == 0:
+        print('짝수', num, '찾았음')
+        continue # 이번 이터러블 끝냄
+    print('홀수', num, '찾았음')
+
+# pass문
+# 아무 것도 하지 않음
+# 문법적으로 필요하긴 한데 뭐 시킬 일은 없을 때 사용함
+
+# while True:
+#     pass
+
+# 최소한의 클래스를 만들 때 사용되기도 함
+# 뭐야 너네 interface 같은 거도 없니 어휴 저런
+
+# https://docs.python.org/ko/3/tutorial/controlflow.html#pass-statements
+# 여기부터 해라
+>>>>>>> origin/master
