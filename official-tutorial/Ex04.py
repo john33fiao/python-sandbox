@@ -46,4 +46,24 @@ print(f(3))
 
 # 키워드 인자
 
+# 함수는 kwarg=value 형식의 키워드 인자를 사용해서 호출 가능
+# kwarg : keyword argument
+# key 오타인줄 알았네;;
 
+
+def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
+    print('-- This parrot wouldn\'t', action, end=' ')
+    print('if you put', voltage, 'volts throught it.')
+    print('-- Lovely plumge, the', type)
+    print('-- It\'s', state, '!')
+
+# 하나의 필수 인자(voltage), 세 개의 선택적 인자(state, action, type)
+
+
+parrot(1000)
+parrot(voltage=1000)
+parrot(voltage=1000000, action='VOOOOOM')
+
+
+# VSCode로 옮겨가서 마저 하겠습니다
+# 파이참 쓰고싶어요
