@@ -68,6 +68,3 @@ print(list(enumerate(a)))
 # 범위 그냥 프린트하면 이상한 거 나옴
 print(range(5,10))
 # 왜냐면 이건 리스트가 아니라 그냥 이터러블 객체이기 때문
-
-# https://docs.python.org/ko/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops
-# 여기부터 계속 진행할 것
