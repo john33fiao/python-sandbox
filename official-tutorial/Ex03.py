@@ -74,13 +74,18 @@ print(f100)
 
 
 def ask_ok(prompt, retries=4, reminder='부디 다시 시도하세요!'):
-    while True
+    while True:
         ok = input(prompt)
         if ok in ('y', 'ye', 'yes'):
             return True
-        if ok in ('n', 'no', 'nop', 'nope')
+        if ok in ('n', 'no', 'nop', 'nope'):
             return False
         retries = retries - 1
         if retries < 0:
             raise ValueError('잘못 대답했다 이놈아')
         print(reminder)
+
+
+ask_ok('정말 종료하기를 원하세요? (y/n)', 2, 'y/n 으로 답해주세요?')
+ask_ok('정말 종료하기를 원하세요? (y/n)', 2)
+ask_ok('정말 종료하기를 원하세요? (y/n)')
