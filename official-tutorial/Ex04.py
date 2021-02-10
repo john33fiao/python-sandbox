@@ -207,5 +207,5 @@ print(foo(1, **{'name': 2}))
 # 비호환 API 변경 발생을 방지하려면 위치 전용
 
 
-# 슬슬 이해 안가지만 그래도 계속한다 > 아래 링크부터
+# 슬슬 이해 안가지만 그래도 계속한다
 # https://docs.python.org/ko/3/tutorial/controlflow.html#arbitrary-argument-lists
