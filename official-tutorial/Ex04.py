@@ -68,10 +68,6 @@ parrot(voltage=1000000, action='VOOOOOM')
 print('----------------')
 parrot(action='VOOOOOOOM', voltage=12345)
 print('----------------')
-
-
-# VSCode로 옮겨가서 마저 하겠습니다
-# 파이참 쓰고싶어요
-
-# 삼성 Dex 조건에서 코딩 한 번 시도해봅니다
-# 어찌어찌 되기는 하는데 그렇게 진지하게 쓸 물건은 또 아니지 싶네요, 아이고 아쉽다
+parrot('a million', 'bereft of life', 'jump')
+print('----------------')
+parrot('a thound', state='pushing up the dasies')
