@@ -59,6 +59,7 @@ def parrot(voltage, state='가만히', action='붐', type='파랑파랑'):
 
 # 하나의 필수 인자(voltage), 세 개의 선택적 인자(state, action, type)
 
+
 print('1000 ---------')
 parrot(1000)  # arg 하나
 print('v=10 ---------')
@@ -92,6 +93,8 @@ def function(a):
 # TypeError: function() got multiple values for argument 'a'
 
 # 튜플(순서쌍)
+
+
 print('-' * 80)  # 이런 방식은 또 신기하네요
 
 
@@ -105,10 +108,47 @@ def cheeseshop(kind, *arguments, **keywords):
         print(kw, ':', keywords[kw])
 
 
-cheeseshop('램버거', '매진이야', "너무너무 매진임", shopkeeper="서정은", client='서요한', sketch='치즈샵 그림')
+cheeseshop('램버거', '매진이야', "너무너무 매진임",
+           shopkeeper="서정은", client='서요한', sketch='치즈샵 그림')
 # kind / arg 1,2 / keywords 1,2,3
 # 인쇄된 키워드 인자 순서 = 함수 호출로 전달된 순서
 
 # 야 점점 번역이 거지같아지는 것 같은데
-# 일단 계속 하긴 하는데... 다음 링크부터 계속 진행할 것
-# https://docs.python.org/ko/3/tutorial/controlflow.html#special-parameters
+
+
+# 특수 매개 변수
+# 인자는 위치나 명시적인 키워드로 함수에 전달
+# 가독성/성능을 위해 인자 전달 방법을 제한하면 더 좋음(당연하지)
+
+# 함수 정의 예시
+
+def f(pos1, pos2, /,
+      pos_or_kwd, *, kwd1, kwd2):
+    pass
+# 위치만 가능 / 위치 또는 키워드 / 키워드만 가능
+# *와 /는 선택적 > 인자가 함수에 전달되는 방식에 따른, 매개 변수의 종류 표시
+# 명명된(named) 매개 변수라고 부르기도 함
+
+# 위치-키워드 인자
+# *, / 가 없으면 인자를 위치나 키워드로 함수에 전달 가능
+
+# 위치 전용
+# 매개 변수 순서 중요함 > 보통 /(슬래시) 앞에 놓임
+# / 없으면 위치 전용 매개변수 없는 것임
+
+# 키워드 전용
+# 인자 목록에 * 넣으면 됨
+
+
+def standard_arg(arg):
+    print(arg)
+
+
+# 아니 이거 어쩌라는 건데 대체 왜 flake8 뜨냐고
+def pos_only_arg(arg, /):
+    print(arg)
+
+
+def kwd_only(*, arg):
+    print(arg)
+
