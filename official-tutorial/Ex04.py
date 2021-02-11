@@ -207,5 +207,24 @@ print(foo(1, **{'name': 2}))
 # 비호환 API 변경 발생을 방지하려면 위치 전용
 
 
-# 슬슬 이해 안가지만 그래도 계속한다
-# https://docs.python.org/ko/3/tutorial/controlflow.html#arbitrary-argument-lists
+# 임의의 인자 목록
+
+# 함수가 임의의 개수 인자로 호출될 수 있도록 지정 / 튜플로 묶임
+
+# def wwite_multiple_items(file, separator, *args):
+#     file.write(separator.join(args))
+
+# 가변 길이 인자 args 앞에 여러 인자가 온다
+# *args 뒤에 있는 형식 매개변수는 <키워드=전용> 인자임 / 위치 인자 대신 키워드 인자로만 사용가능
+
+
+def concat(*args, sep='/'):
+    return sep.join(args)
+
+
+print(concat('땅', '불', '물', '공기'))
+print(concat('땅', '불', '물', '공기', sep='.'))
+
+
+#인자 목록 언패킹
+
