@@ -228,3 +228,4 @@ print(concat('땅', '불', '물', '공기', sep='.'))
 
 #인자 목록 언패킹
 
+# https://docs.python.org/ko/3/tutorial/controlflow.html#unpacking-argument-lists
