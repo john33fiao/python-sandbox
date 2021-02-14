@@ -83,3 +83,6 @@ def 내_함수():
 
 
 print(내_함수.__doc__)
+
+
+# https://docs.python.org/ko/3/tutorial/controlflow.html#function-annotations
