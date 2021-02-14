@@ -9,3 +9,24 @@
 
 # 뭔말인지 모르겠으니 그냥 계속 따라갑니다
 
+print(list(range(3,6)))
+# 분리된 인자를 평범하게 호출함
+# 3, 4, 5
+
+args = [3, 6]
+print(list(range(*args)))
+# 리스트에서 언팩된 인자와 함께 호출함
+# 3, 4, 5
+
+
+# 딕셔너리도 ** 연산자를 써서 키워드 인자 전달가능
+
+
+def parrot(voltage, state='깡', action='붐'):
+    print("-- 이 앵무새는", action, end=' ')
+    print('네가 만약', voltage, '볼트를 통과시키면.', end=' ')
+    print("얘는", state, '!')
+
+
+d = {'voltage': '사백만', 'state': '피나요', 'action': '붐--'}
+parrot(**d)
