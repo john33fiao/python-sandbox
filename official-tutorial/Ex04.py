@@ -192,7 +192,7 @@ def foo(name, **kwds):
 # 그러니까 위치 전용 인자 / 를 사용해봅시다, 그러면 name는 위치인자, 'name'은 키워드 인자의 키
 
 
-def foo(name, /, **kwds):
+def foo(name, /,  **kwds):
     return 'name' in kwds
 
 
@@ -224,3 +224,4 @@ def concat(*args, sep='/'):
 
 print(concat('땅', '불', '물', '공기'))
 print(concat('땅', '불', '물', '공기', sep='.'))
+
