@@ -116,4 +116,92 @@ print([str(round(pi, i)) for i in range(1, 6)])
 
 # 5.1.4 중첩된 리스트 컴프리헨션
 
-# 아 왤케 재미없냐 파이썬... 뭔가 실용적으로 하고싶은데... 
+matrix = [
+    [1,2,3,4],
+    [5,6,7,8],
+    [9,10,11,12]
+]
+
+print(matrix)
+
+# 행과 열 바꾸기
+print([[row[i] for row in matrix] for i in range(4)])
+
+# for의 문맥에서 값이 구해짐
+# 그러므로 아래와 동일함
+transposed = []
+for i in range(4):
+    transposed.append([row[i] for row in matrix])
+
+print(transposed)
+
+#혹은 아래와 같음
+transposed2 = []
+for i in range(4):
+    # 이중 포문
+    transposed_row = []
+    for row in matrix:
+        transposed_row.append(row[i])
+    transposed2.append(transposed_row)
+
+print(transposed2)
+
+# 포문은 쓸데없이 코드 복잡해지니까 어지간하면 내장함수 써라
+# zip()
+
+print(list(zip(*matrix)))
+
+
+# 5.2 del 문
+# 인덱스 사용해서 항목 삭제
+# 전체 리스트 비우는데도 사용함
+# 변수 자체를 삭제할 수도 있음
+
+a = [-1, 1, 66.25, 333, 333, 1234.5]
+
+del a[0]
+print(a)
+
+del a[2:4]
+print(a)
+del a[:]
+print(a)
+del a
+# print(a)
+
+
+# 5.3 튜플
+
+# 튜플은 쉼표로 구분되는 여러 값임 - 자료형 달라도 되나봄?
+
+t = 12345, 54321, 'hello', 'world'
+print(t)
+
+# 다른 튜플 안에 넣을 수 있음
+u = 31313, t
+print(u)
+
+# 덮어쓰기 불가
+# t[0] = 99999
+
+# 하지만 덮어쓰기 가능한 객체는 넣을 수 있음
+v = ([1,2,3], [3,2,1])
+print(v)
+
+# 비었거나, 값 하나만 가진 튜플은 하지 말아야하는 거 아님?
+
+empty = ()
+singleton = 'hello', 
+print(len(empty), '/', len(singleton))
+
+# 참고로 반대방향으로 튜플 묶기도 가능함
+# 'x', 'y', 'z' = tp
+aa, bb, cc, dd = t
+# 뭐야 안되잖아 그짓말하지마
+# 아 되기는 함, 설명서 제대로 읽어라
+# 튜플 내 요소 개수랑, 변수 개수가 같아야함
+
+
+# 5.4 집합
+# https://docs.python.org/ko/3/tutorial/datastructures.html#sets
+
