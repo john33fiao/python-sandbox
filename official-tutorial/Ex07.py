@@ -205,3 +205,32 @@ aa, bb, cc, dd = t
 # 5.4 집합
 # https://docs.python.org/ko/3/tutorial/datastructures.html#sets
 
+# 중복 요소 없는 컬렉션
+# 멤버십 검사, 중복 엔트리 제거 목적으로 사용
+# 수학 집합 생각해도 됨
+
+# 빈 집합은 중괄호로 못만든다
+
+basket = {'서요한', '포트폴리오', '만들어라', '아무리', '귀찮아도', '먹고살아야지'}
+print(basket)
+
+print('포트폴리오' in basket)
+print('안빈낙도' in basket)
+
+a = set('abracadabra')
+b = set('alacazam')
+
+print(a, '/', b)
+print(a|b) # 합집합
+print(a-b) # 차집합
+print(a&b) # 공집합
+print(a^b) # 공집합 제외 합집합
+
+# 집합 컴프리헨션
+
+a = {x for x in 'abracadabra' if x not in 'abc'}
+print(a)
+
+
+# 5.5 딕셔너리
+# https://docs.python.org/ko/3/tutorial/datastructures.html#dictionaries
